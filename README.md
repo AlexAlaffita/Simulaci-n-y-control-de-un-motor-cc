@@ -54,10 +54,12 @@ Está organizado de la siguiente manera:
 
 
 # Circuito
-      Raspberry     L298N
-          23  -------In2
-          24  -------In1
-          25  -------en
-          GND -------GND
+      Raspberry     L298N           Motor                    L298N    Raspberry           Pantalla   Raspberry
+          23  -------In2            Vcc M(rojo)      ------- Out A+       -                 Vcc  ----- 3v3-GPIO1
+          24  -------In1            Gnd M(negro)     ------- Out B-       -                 Gnd  ----- Gnd
+          25  -------en             Vcc E(verde)     -------   -       3v3-GPIO1            SCL  ----- SCL
+          GND -------GND            Gnd E(azul)      -------   -       Gnd                  SDA  ----- SDA
+                                    Señal A(café)    -------   -       GPIO5
+                                    señal B(amarillo)-------   -       GPIO6
 
 ![This is an image](https://raw.githubusercontent.com/AlexAlaffita/Simulacion-y-control-de-un-motor-cc/main/Imagenes/circuito_motor_encoder_L298N_pantalla_bb.png)
