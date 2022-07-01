@@ -30,25 +30,25 @@ Está organizado de la siguiente manera:
 
 # Forma de funcionamiento.
 
-Este proyecto lo puedes disfrutar de dos maneras:
-1. Por medio de la terminal con ayuda de MQTT.
-      a. Recuerda que el archivo read_RPM.py y autocalibración_y_control.py deben estar en una carpeta
-      b. En la raspberry activa el daemon >>sudo pigpiod
-      c. Compila en la raspberry: autocalibracion_y_control.py
-      d. Para controlar la velocidad del motor tienes que enviar desde mqtt y alguna terminal el porcentaje
-         del voltaje (de 0 a 100%)
-      e. Para que se calibre el motor tienes que enviar desde mqtt '-2'
-      f. Si requieres cerrar el programa lo puedes hacer desde mqtt enviando '-1'
+      Este proyecto lo puedes disfrutar de dos maneras:
+      1. Por medio de la terminal con ayuda de MQTT.
+            a. Recuerda que el archivo read_RPM.py y autocalibración_y_control.py deben estar en una carpeta
+            b. En la raspberry activa el daemon >>sudo pigpiod
+            c. Compila en la raspberry: autocalibracion_y_control.py
+            d. Para controlar la velocidad del motor tienes que enviar desde mqtt y alguna terminal el porcentaje
+            del voltaje (de 0 a 100%)
+            e. Para que se calibre el motor tienes que enviar desde mqtt '-2'
+            f. Si requieres cerrar el programa lo puedes hacer desde mqtt enviando '-1'
       
-2. Por medio de node-red
-      a. Hacer los pasos anteriores (del a.-c.) y después echar a andar node-red y el programa que se encuentra 
-         en la carpeta node-red/menu_total.json
-      b. Tenemos un menú a la izquierda en el cual puedes escoger como controlar el motor, además de poder 
-         elegir si calibras o no la velocidad simulada.
-         b.1. Si escojes controlar por porcentaje, estas controlando el porcentaje de 0 a 100% de 12 volts, es decir,
-              si pones 25% entonces estás suministrando 3 volts al motor
-         b.2 Si escojes controlar por voltaje, estás controlando directamente cuantos volts suministras al motor,
-      c. Si escojes calibración, se suministrará el máximo voltaje sobre el motor por 2 segundos y se calibrará.
+      2. Por medio de node-red
+            a. Hacer los pasos anteriores (del a.-c.) y después echar a andar node-red y el programa que se encuentra 
+            en la carpeta node-red/menu_total.json
+            b. Tenemos un menú a la izquierda en el cual puedes escoger como controlar el motor, además de poder 
+            elegir si calibras o no la velocidad simulada.
+                  b.1. Si escojes controlar por porcentaje, estas controlando el porcentaje de 0 a 100% de 12 volts, es decir,
+                  si pones 25% entonces estás suministrando 3 volts al motor
+                  b.2 Si escojes controlar por voltaje, estás controlando directamente cuantos volts suministras al motor,
+            c. Si escojes calibración, se suministrará el máximo voltaje sobre el motor por 2 segundos y se calibrará.
  
  ![This is an image](https://raw.githubusercontent.com/AlexAlaffita/Simulacion-y-control-de-un-motor-cc/main/Imagenes/node_red_dashboard.png)
 
