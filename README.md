@@ -82,8 +82,8 @@ Está organizado de la siguiente manera:
       12. NUMPY
       13. SKLEARN
      
-      Además de otras comprobaciones, es mejor si lo buscas en la parte del curso correspondiente, pero si lo que buscas es copiar 
-      y pegar,
+      Además de otras comprobaciones, es mejor si lo buscas en la parte del curso correspondiente, pero si lo que buscas es 
+      copiar y pegar,
       
       Para la pantalla:
       sudo apt install -y python3-dev
