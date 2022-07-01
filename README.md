@@ -79,6 +79,29 @@ Está organizado de la siguiente manera:
       9. LUMA.OLED
       10. CANVAS  
       11. ADAFRUIT-CIRCUITPYTHON-DISPLAYIO-SH1106
+      12. NUMPY
+      13. SKLEARN
+     
+      Además de otras comprobaciones, es mejor si lo buscas en la parte del curso correspondiente, pero si lo que buscas es copiar 
+      y pegar,
+      
+      Para la pantalla:
+      sudo apt install -y python3-dev
+      sudo apt install -y python-imaging python-smbus i2c-tools
+      sudo apt install -y python3-pil
+      sudo apt install -y python3-pip
+      sudo apt install -y python3-setuptools
+      sudo apt install -y python3-rpi.gpio
+      
+      Para las bibliotecas de mate:
+      pip3 install opencv-python
+      sudo apt-get install libcblas-dev
+      sudo apt-get install libhdf5-dev
+      sudo apt-get install libhdf5-serial-dev
+      sudo apt-get install libatlas-base-dev
+      sudo apt-get install libjasper-dev
+      sudo apt-get install libqtgui4 
+      sudo apt-get install libqt4-test
   
 
 
