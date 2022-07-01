@@ -28,7 +28,7 @@ Está organizado de la siguiente manera:
       >si vas a controlar el motor desde mqtt necesitas el archivo: velocidad_voltaje_mqtt.py
       >si vas a conectar sólo la pantalla necesitas el archivo: pantalla_oled.py
 
-Forma de funcionamiento.
+#Forma de funcionamiento.
 Este proyecto lo puedes disfrutar de dos maneras:
 1. Por medio de la terminal con ayuda de MQTT.
       a. Recuerda que el archivo read_RPM.py y autocalibración_y_control.py deben estar en una carpeta
@@ -49,6 +49,7 @@ Este proyecto lo puedes disfrutar de dos maneras:
          b.2 Si escojes controlar por voltaje, estás controlando directamente cuantos volts suministras al motor,
       c. Si escojes calibración, se suministrará el máximo voltaje sobre el motor por 2 segundos y se calibrará.
  
+ ![This is an image](https://raw.githubusercontent.com/AlexAlaffita/Simulacion-y-control-de-un-motor-cc/main/Imagenes/node_red_dashboard.png)
 
 Este repositorio contiene todos los archivos necesarios para llevar a cabo el proyecto capstone: "Control y simulación de un motor de corriente contínua por wifi".
 ![This is an image](https://raw.githubusercontent.com/AlexAlaffita/Simulacion-y-control-de-un-motor-cc/main/Imagenes/circuito_motor_encoder_L298N_pantalla_bb.png)
