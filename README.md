@@ -63,3 +63,22 @@ Está organizado de la siguiente manera:
                                     señal B(amarillo)-------   -       GPIO6
 
 ![This is an image](https://raw.githubusercontent.com/AlexAlaffita/Simulacion-y-control-de-un-motor-cc/main/Imagenes/circuito_motor_encoder_L298N_pantalla_bb.png)
+
+
+# Preparación de la Raspberry
+      Se deben instalar varias bibliotecas y paquetes en la raspberry, personalmente creo que instalar todo desde Thonny IDE 
+      de la Raspberry es muy sencillo:
+      1. L298N
+      2. PIGPIO
+      3. MQTT
+      4. PAHO-MQTT
+      5. REMOTE-I2C 
+      6. ADAFRUIT-SSD1306
+      7. LUMA 
+      8. LUMA.CORE
+      9. LUMA.OLED
+      10. CANVAS  
+      11. ADAFRUIT-CIRCUITPYTHON-DISPLAYIO-SH1106
+  
+
+
