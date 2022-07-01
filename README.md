@@ -28,7 +28,8 @@ Está organizado de la siguiente manera:
       >si vas a controlar el motor desde mqtt necesitas el archivo: velocidad_voltaje_mqtt.py
       >si vas a conectar sólo la pantalla necesitas el archivo: pantalla_oled.py
 
-#Forma de funcionamiento.
+# Forma de funcionamiento.
+
 Este proyecto lo puedes disfrutar de dos maneras:
 1. Por medio de la terminal con ayuda de MQTT.
       a. Recuerda que el archivo read_RPM.py y autocalibración_y_control.py deben estar en una carpeta
