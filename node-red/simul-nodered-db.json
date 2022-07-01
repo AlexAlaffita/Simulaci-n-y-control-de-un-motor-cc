@@ -1,0 +1,251 @@
+[
+    {
+        "id": "35610b64eaf917e2",
+        "type": "tab",
+        "label": "Flow 5",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "599d2fd85503745f",
+        "type": "mqtt in",
+        "z": "35610b64eaf917e2",
+        "name": "",
+        "topic": "capstone/salon/virtual/voltaje",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9a12a1fd0f38df46",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 60,
+        "wires": [
+            [
+                "79a573fc51d376e3"
+            ]
+        ]
+    },
+    {
+        "id": "79a573fc51d376e3",
+        "type": "json",
+        "z": "35610b64eaf917e2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 370,
+        "y": 60,
+        "wires": [
+            [
+                "ef5e6a2d8ba23e16"
+            ]
+        ]
+    },
+    {
+        "id": "3656a05d27395fd4",
+        "type": "json",
+        "z": "35610b64eaf917e2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "e9888c77035a84cf"
+            ]
+        ]
+    },
+    {
+        "id": "ef5e6a2d8ba23e16",
+        "type": "function",
+        "z": "35610b64eaf917e2",
+        "name": "",
+        "func": "global.set (\"voltaje\", parseFloat(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 520,
+        "y": 60,
+        "wires": [
+            [
+                "e5b3f2bd55810e39"
+            ]
+        ]
+    },
+    {
+        "id": "e5b3f2bd55810e39",
+        "type": "debug",
+        "z": "35610b64eaf917e2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "e9888c77035a84cf",
+        "type": "function",
+        "z": "35610b64eaf917e2",
+        "name": "",
+        "func": "global.set (\"RPM\", parseFloat(msg.payload));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "31962cc082663394"
+            ]
+        ]
+    },
+    {
+        "id": "31962cc082663394",
+        "type": "debug",
+        "z": "35610b64eaf917e2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "83049a777854167a",
+        "type": "mqtt in",
+        "z": "35610b64eaf917e2",
+        "name": "",
+        "topic": "capstone/salon/virtual/RPM",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "9a12a1fd0f38df46",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "3656a05d27395fd4"
+            ]
+        ]
+    },
+    {
+        "id": "286be07f8e80d04c",
+        "type": "inject",
+        "z": "35610b64eaf917e2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 340,
+        "wires": [
+            [
+                "dc55e13118c35652"
+            ]
+        ]
+    },
+    {
+        "id": "dc55e13118c35652",
+        "type": "function",
+        "z": "35610b64eaf917e2",
+        "name": "",
+        "func": "msg.topic=\"INSERT INTO dcmotor (voltaje,RPM) VALUES ('\"+global.get (\"voltaje\")+\"','\"+global.get (\"RPM\")+\"')\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 340,
+        "wires": [
+            [
+                "12146519ace98a7c"
+            ]
+        ]
+    },
+    {
+        "id": "12146519ace98a7c",
+        "type": "mysql",
+        "z": "35610b64eaf917e2",
+        "mydb": "d107e1bd580fdba6",
+        "name": "",
+        "x": 570,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9a12a1fd0f38df46",
+        "type": "mqtt-broker",
+        "name": "localhost",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "ivan--94297",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d107e1bd580fdba6",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "paramdcmotor",
+        "tz": "",
+        "charset": "UTF8"
+    }
+]
