@@ -62,6 +62,7 @@ Está organizado de la siguiente manera:
                                 |    Señal A(café)    -------   -       GPIO5         |
                                 |    señal B(amarillo)-------   -       GPIO6         |
 
+Vcc M y Gnd M son del motor y  Vcc E y Gnd E son del encoder, Señal A y Señal B son los dos sensores del encoder.
 ![This is an image](https://raw.githubusercontent.com/AlexAlaffita/Simulacion-y-control-de-un-motor-cc/main/Imagenes/circuito_motor_encoder_L298N_pantalla_bb.png)
 
 
