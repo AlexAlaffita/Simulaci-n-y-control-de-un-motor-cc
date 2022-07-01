@@ -52,5 +52,12 @@ Está organizado de la siguiente manera:
  
  ![This is an image](https://raw.githubusercontent.com/AlexAlaffita/Simulacion-y-control-de-un-motor-cc/main/Imagenes/node_red_dashboard.png)
 
-Este repositorio contiene todos los archivos necesarios para llevar a cabo el proyecto capstone: "Control y simulación de un motor de corriente contínua por wifi".
+
+# Circuito
+      Raspberry     L298N
+          23  -------In2
+          24  -------In1
+          25  -------en
+          GND -------GND
+
 ![This is an image](https://raw.githubusercontent.com/AlexAlaffita/Simulacion-y-control-de-un-motor-cc/main/Imagenes/circuito_motor_encoder_L298N_pantalla_bb.png)
