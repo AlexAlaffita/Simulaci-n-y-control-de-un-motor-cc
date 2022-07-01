@@ -40,7 +40,7 @@ Este proyecto lo puedes disfrutar de dos maneras:
       e. Para que se calibre el motor tienes que enviar desde mqtt '-2'
       f. Si requieres cerrar el programa lo puedes hacer desde mqtt enviando '-1'
       
- 2. Por medio de node-red
+2. Por medio de node-red
       a. Hacer los pasos anteriores (del a.-c.) y después echar a andar node-red y el programa que se encuentra 
          en la carpeta node-red/menu_total.json
       b. Tenemos un menú a la izquierda en el cual puedes escoger como controlar el motor, además de poder 
