@@ -51,6 +51,8 @@ import numpy as np
 from sklearn import linear_model
 # Libreria para obtener las RPM's
 from read_RPM import reader # Archivo read_RPM contiene a la clase reader
+
+#Configuración de los mensajes de mqtt
 Vin=0
 def messageFunction (client, userdata, message):
     global x
@@ -68,6 +70,7 @@ def messageFunction (client, userdata, message):
     else:
         print('El porcentaje debe estar entre 0 y 100')
         
+# Configuración del broker
 broker_address="18.157.172.72" # IP de hivemq, se puede poner 'hivemq.com' pero tarda un poco
 ourClient = mqtt.Client("Alex_Alaffita") # Crea un objeto para el cliente de mqtt
 ourClient.connect(broker_address, 1883) # Este nos conecta al broker, también funciona con la
