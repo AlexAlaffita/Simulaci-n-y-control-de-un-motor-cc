@@ -51,7 +51,7 @@ Está organizado de la siguiente manera:
                elegir si calibras o no la velocidad simulada.
                   b.1. Si escojes controlar por porcentaje, estas controlando el porcentaje de 0 a 100% de 12 volts, es decir,
                        si pones 25% entonces estás suministrando 3 volts al motor
-                  b.2 Si escojes controlar por voltaje, estás controlando directamente cuantos volts suministras al motor,
+                  b.2 Si escoges controlar por voltaje, estás controlando directamente cuantos volts suministras al motor,
             c. Si escojes calibración, se suministrará el máximo voltaje sobre el motor por 2 segundos y se calibrará.
  
  ![This is an image](https://raw.githubusercontent.com/AlexAlaffita/Simulacion-y-control-de-un-motor-cc/main/Imagenes/node_red_dashboard.png)
