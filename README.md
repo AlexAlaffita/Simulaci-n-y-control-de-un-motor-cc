@@ -3,8 +3,7 @@ El objetivo es el control de un motor de corriente contínua por wifi
 
 ## Profesores:
       Francisco Alejandro Alaffita Hernández
-      Guillermo Miguel Martínez Rodriguez
-      Ivan Arturo Vázquez Isidoro
+      Beatris Adriana Escobedo Trujillo
 
 Está organizado de la siguiente manera:
 
