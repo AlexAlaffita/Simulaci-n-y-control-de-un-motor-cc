@@ -1,9 +1,8 @@
-Este repositorio forma parte del curso IoT de Samsung Innovation Campus
 El objetivo es el control de un motor de corriente contínua por wifi
 
 ## Profesores:
       Francisco Alejandro Alaffita Hernández
-      Beatris Adriana Escobedo Trujillo
+
 
 Está organizado de la siguiente manera:
 
